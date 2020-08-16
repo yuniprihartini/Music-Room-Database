@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameLayoutAddMusic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".songs.screen.AddNewMusicFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view_music"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:backgroundTint="#4EAA52"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginRight="25dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+            <EditText
+                android:id="@+id/input_title_music"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:ems="10"
+                android:textSize="30dp"
+                android:hint="Title"
+                android:fontFamily="@font/salsa"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/input_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                android:fontFamily="@font/salsa"
+                android:ems="10"
+                android:hint="Duration (seconds)"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_save_music"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#1E88E5"
+        android:text="Save"
+        android:fontFamily="@font/salsa"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view_music" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

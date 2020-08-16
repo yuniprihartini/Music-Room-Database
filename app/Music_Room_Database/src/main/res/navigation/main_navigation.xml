@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/albumListFragment">
+
+    <fragment
+        android:id="@+id/albumListFragment"
+        android:name="com.example.music_room_database.songs.screen.AlbumListFragment"
+        android:label="fragment_album_list"
+        tools:layout="@layout/fragment_album_list" >
+        <action
+            android:id="@+id/action_albumListFragment_to_addNewAlbumFragment"
+            app:destination="@id/addNewAlbumFragment" />
+        <action
+            android:id="@+id/action_albumListFragment_to_musicListFragment"
+            app:destination="@id/musicListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewAlbumFragment"
+        android:name="com.example.music_room_database.songs.screen.AddNewAlbumFragment"
+        android:label="fragment_add_new_album"
+        tools:layout="@layout/fragment_add_new_album">
+        <action
+            android:id="@+id/action_addNewAlbumFragment_pop"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/addNewAlbumFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/musicListFragment"
+        android:name="com.example.music_room_database.songs.screen.MusicListFragment"
+        android:label="fragment_music_list"
+        tools:layout="@layout/fragment_music_list" >
+        <action
+            android:id="@+id/action_musicListFragment_to_addNewMusicFragment"
+            app:destination="@id/addNewMusicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewMusicFragment"
+        android:name="com.example.music_room_database.songs.screen.AddNewMusicFragment"
+        android:label="fragment_add_new_music"
+        tools:layout="@layout/fragment_add_new_music">
+    <action
+        android:id="@+id/action_addNewMusicFragment_pop"
+        app:popUpTo="@id/addNewMusicFragment"
+        app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
